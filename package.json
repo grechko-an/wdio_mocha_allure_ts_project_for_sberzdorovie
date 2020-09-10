@@ -1,0 +1,54 @@
+{
+  "name": "test-proj-for-sberzdorovije",
+  "version": "1.0.0",
+  "description": "Testing project for Sber Zdorovije, website: https://docdoc.ru,",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grechko-an/test-proj-for-sberzdorovije.git"
+  },
+  "keywords": [
+    "webdriverio",
+    "mocha",
+    "typescript",
+    "allure"
+  ],
+  "author": "Alexander Grechko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grechko-an/test-proj-for-sberzdorovije/issues"
+  },
+  "homepage": "https://github.com/grechko-an/test-proj-for-sberzdorovije#readme",
+  "scripts": {
+    "test": "wdio wdio.conf.js",
+    "lint": "tslint --fix src/**/*.ts && tslint --fix src/**/*.*.ts",
+    "build": "rimraf dist && tsc --outDir dist",
+    "report": "allure generate allure-results --clean && allure open",
+    "e2e": "npm run build && npm run test && npm run report"
+  },
+  "dependencies": {
+    "@types/mocha": "^7.0.2",
+    "webdriverio": "^6.4.6"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@wdio/allure-reporter": "^6.4.7",
+    "@wdio/cli": "^6.1.12",
+    "@wdio/dot-reporter": "^6.1.9",
+    "@wdio/local-runner": "^6.1.12",
+    "@wdio/mocha-framework": "^6.1.8",
+    "@wdio/selenium-standalone-service": "^6.1.13",
+    "@wdio/spec-reporter": "^6.1.12",
+    "@wdio/sync": "^6.1.8",
+    "chai": "^4.2.0",
+    "copyfiles": "^2.2.0",
+    "it-each": "^0.4.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.3"
+  }
+}
