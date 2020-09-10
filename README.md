@@ -1,0 +1,1 @@
+# wdio_mocha_allure_ts_project_for_sberzdorovie
